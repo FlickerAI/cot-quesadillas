@@ -1,0 +1,385 @@
+---
+// index.astro
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización - R&G Solutions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: white !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .print-break-inside-avoid {
+                break-inside: avoid;
+            }
+            @page {
+                margin: 1cm;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20">
+
+    <!-- Navbar / Header -->
+    <header class="bg-brand-900 text-white py-6 shadow-md print:bg-white print:text-brand-900 print:shadow-none print:border-b-2 print:border-brand-900">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i data-lucide="monitor-smartphone" class="w-8 h-8 text-brand-500"></i>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-tight">R&G Solutions</h1>
+                    <p class="text-xs text-brand-100 print:text-slate-600 tracking-wider uppercase">Soluciones Audiovisuales y Tecnológicas</p>
+                </div>
+            </div>
+            <div class="mt-4 md:mt-0 text-center md:text-right">
+                <p class="text-sm font-medium text-brand-100 print:text-slate-600" id="current-date"></p>
+                <button onclick="window.print()" class="no-print mt-2 inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors print:hidden">
+                    <i data-lucide="printer" class="w-4 h-4"></i> Imprimir / PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 mt-8 space-y-12 print:space-y-8 print:mt-4">
+        
+        <!-- Intro -->
+        <section class="text-center max-w-3xl mx-auto">
+            <h2 class="text-sm font-bold text-brand-600 uppercase tracking-widest mb-2">Propuesta Comercial</h2>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Cotización — Sistema Punto de Venta R&G Solutions</h3>
+            <p class="text-lg text-slate-600 font-medium mb-6">Solución Operativa Integral para Control y Gestión de Ventas</p>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-left print:shadow-none print:p-0 print:border-none">
+                <p class="text-slate-700 leading-relaxed">
+                    Gracias por considerar nuestro <strong>sistema de Punto de Venta R&G Solutions</strong> como parte de la operación de su negocio.<br><br>
+                    La presente propuesta está diseñada específicamente para las necesidades operativas de su local, buscando optimizar tiempos, reducir errores y mejorar el control general de ventas e inventario.
+                </p>
+            </div>
+        </section>
+
+        <!-- Objetivos -->
+        <section class="print-break-inside-avoid">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="target" class="w-6 h-6 text-brand-600"></i>
+                <h3 class="text-2xl font-bold text-slate-900">Objetivo del Sistema</h3>
+            </div>
+            <p class="text-slate-600 mb-6">Implementar una solución integral de punto de venta que permita:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-start gap-3">
+                    <i data-lucide="zap" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-slate-700">Agilizar el proceso de atención y cobro.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-start gap-3">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-slate-700">Reducir errores en pedidos y cuentas.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-start gap-3">
+                    <i data-lucide="network" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-slate-700">Mejorar el control operativo general del local.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-start gap-3">
+                    <i data-lucide="package" class="w-5 h-5 text-purple-500 shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-slate-700">Llevar un mejor control de inventario y compras.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-start gap-3">
+                    <i data-lucide="bar-chart-3" class="w-5 h-5 text-indigo-500 shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-slate-700">Obtener reportes y estadísticas de ventas.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-start gap-3">
+                    <i data-lucide="clock" class="w-5 h-5 text-rose-500 shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-slate-700">Optimizar tiempos de operación durante horas pico.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 flex items-start gap-3 lg:col-span-3">
+                    <i data-lucide="trending-down" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-slate-700">Reducir pérdidas por errores humanos o falta de control.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opciones de Inversión -->
+        <section class="print-break-inside-avoid">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="credit-card" class="w-6 h-6 text-brand-600"></i>
+                <h3 class="text-2xl font-bold text-slate-900">Opciones de Inversión</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Opción 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                    <div class="p-6 bg-slate-50 border-b border-slate-100 text-center">
+                        <h4 class="text-xl font-bold text-slate-800">Opción 1 — Operación Estándar</h4>
+                        <div class="mt-4 flex justify-center items-baseline gap-1">
+                            <span class="text-4xl font-extrabold tracking-tight text-slate-900">$22,000</span>
+                            <span class="text-sm font-semibold text-slate-500">MXN</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">Pago Único</p>
+                    </div>
+                    
+                    <div class="p-6 flex-1 text-sm text-slate-700 space-y-6">
+                        <!-- Software -->
+                        <div>
+                            <h5 class="font-bold text-slate-900 mb-3 flex items-center gap-2"><i data-lucide="monitor" class="w-4 h-4 text-brand-500"></i> Software Punto de Venta R&G Solutions</h5>
+                            <ul class="space-y-2 ml-6 list-disc marker:text-brand-500">
+                                <li>Sistema POS completo.</li>
+                                <li>Gestión de ventas, inventario y compras.</li>
+                                <li>Catálogo de productos.</li>
+                                <li>Reportes y estadísticas.</li>
+                                <li>Aplicación comandera.</li>
+                                <li><span class="font-semibold text-brand-600">Licencia permanente de uso.</span></li>
+                                <li>Sin suscripciones mensuales ni comisiones por venta.</li>
+                            </ul>
+                        </div>
+                        <!-- Hardware -->
+                        <div>
+                            <h5 class="font-bold text-slate-900 mb-3 flex items-center gap-2"><i data-lucide="hard-drive" class="w-4 h-4 text-brand-500"></i> Hardware Incluido</h5>
+                            <ul class="space-y-2 ml-6 list-disc marker:text-brand-500">
+                                <li>4 tablets operativas.</li>
+                                <li>2 impresoras térmicas.</li>
+                                <li>1 cajón de dinero.</li>
+                                <li>Stand para terminal principal.</li>
+                                <li>Funda protectora para tablet principal.</li>
+                            </ul>
+                        </div>
+                        <!-- Servicios -->
+                        <div>
+                            <h5 class="font-bold text-slate-900 mb-3 flex items-center gap-2"><i data-lucide="wrench" class="w-4 h-4 text-brand-500"></i> Servicios Incluidos</h5>
+                            <ul class="space-y-2 ml-6 list-disc marker:text-brand-500">
+                                <li>Instalación inicial del sistema.</li>
+                                <li>Configuración básica.</li>
+                                <li>Capacitación inicial al personal.</li>
+                                <li>Soporte técnico básico.</li>
+                                <li>Actualizaciones necesarias de funcionamiento y estabilidad.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opción 2 -->
+                <div class="bg-white rounded-2xl shadow-xl border-2 border-brand-500 overflow-hidden flex flex-col relative transform md:-translate-y-2">
+                    <div class="absolute top-0 right-0 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                        Recomendado
+                    </div>
+                    <div class="p-6 bg-brand-50 border-b border-brand-100 text-center">
+                        <h4 class="text-xl font-bold text-brand-900">Opción 2 — Operación Optimizada</h4>
+                        <div class="mt-4 flex justify-center items-baseline gap-1">
+                            <span class="text-4xl font-extrabold tracking-tight text-brand-700">$25,000</span>
+                            <span class="text-sm font-semibold text-brand-600">MXN</span>
+                        </div>
+                        <p class="text-xs text-brand-600 mt-1 uppercase tracking-wider font-semibold">Pago Único</p>
+                    </div>
+                    
+                    <div class="p-6 flex-1 text-sm text-slate-700 space-y-6">
+                        <p class="text-brand-800 font-medium bg-brand-100 p-3 rounded-lg flex items-start gap-2">
+                            <i data-lucide="info" class="w-5 h-5 shrink-0 mt-0.5"></i>
+                            Incluye todo lo de la opción estándar, con la siguiente mejora en hardware:
+                        </p>
+                        <!-- Hardware Mejorado -->
+                        <div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                                    <span class="font-semibold text-slate-900">1 tablet principal de 11” para administración y control operativo.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                                    <span>3 tablets operativas para atención y comandas.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Beneficios de mejora -->
+                        <div>
+                            <h5 class="font-bold text-slate-900 mb-3 flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-brand-500"></i> Beneficios de esta configuración</h5>
+                            <ul class="space-y-2 ml-6 list-disc marker:text-brand-500">
+                                <li>Mejor supervisión de ventas y reportes.</li>
+                                <li>Mayor comodidad de uso en administración.</li>
+                                <li>Mejor visualización de pedidos e inventario.</li>
+                                <li>Operación más fluida durante horas de alta demanda.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Beneficios Operativos -->
+        <section class="print-break-inside-avoid bg-slate-800 text-white rounded-2xl p-8 print:bg-white print:text-slate-800 print:border print:border-slate-200">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/3">
+                    <h3 class="text-2xl font-bold mb-4">Beneficios Operativos</h3>
+                    <p class="text-slate-300 print:text-slate-600 text-sm leading-relaxed">
+                        Implementar un sistema de punto de venta permite convertir tiempo perdido y errores operativos en <strong>productividad y control</strong>.
+                    </p>
+                </div>
+                <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 bg-slate-700/50 print:bg-slate-50 p-3 rounded-lg border border-slate-600 print:border-slate-100">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span class="text-sm">Reducción de errores en pedidos.</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-700/50 print:bg-slate-50 p-3 rounded-lg border border-slate-600 print:border-slate-100">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span class="text-sm">Mayor rapidez en atención.</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-700/50 print:bg-slate-50 p-3 rounded-lg border border-slate-600 print:border-slate-100">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span class="text-sm">Mejor organización cocina/caja.</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-700/50 print:bg-slate-50 p-3 rounded-lg border border-slate-600 print:border-slate-100">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span class="text-sm">Menor margen de pérdida/mermas.</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-700/50 print:bg-slate-50 p-3 rounded-lg border border-slate-600 print:border-slate-100">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span class="text-sm">Mayor control de ventas diarias.</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-700/50 print:bg-slate-50 p-3 rounded-lg border border-slate-600 print:border-slate-100">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span class="text-sm">Historial y análisis de ventas.</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-700/50 print:bg-slate-50 p-3 rounded-lg border border-slate-600 print:border-slate-100 sm:col-span-2">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span class="text-sm">Mayor facilidad para supervisar la operación.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Condiciones, Garantías, Pagos -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 print-break-inside-avoid">
+            
+            <!-- Columna Izquierda -->
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-5 h-5 text-brand-600"></i> Condiciones
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 shrink-0"></div>La licencia del sistema es de pago único.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 shrink-0"></div>No existen mensualidades ni comisiones por uso.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 shrink-0"></div>Incluye soporte técnico básico remoto.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 shrink-0"></div>Actualizaciones mayores o nuevas funciones podrán cotizarse por separado.</li>
+                    </ul>
+                    
+                    <div class="mt-4 bg-orange-50 border border-orange-100 p-4 rounded-lg text-sm text-slate-700">
+                        <p class="font-bold text-orange-800 mb-2">Nota sobre Configuración Avanzada</p>
+                        <p class="mb-2">La configuración avanzada tiene costo adicional e incluye ejemplos como:</p>
+                        <ul class="list-disc pl-5 space-y-1 text-orange-900/80">
+                            <li>Alta masiva de productos.</li>
+                            <li>Configuración completa de inventario.</li>
+                            <li>Carga detallada de recetas o insumos.</li>
+                            <li>Ajustes operativos personalizados.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 flex items-center gap-2">
+                        <i data-lucide="shield" class="w-5 h-5 text-brand-600"></i> Garantías
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 shrink-0"></div>Garantía sobre funcionamiento correcto del software.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 shrink-0"></div>El hardware está sujeto a garantía del fabricante.</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 shrink-0"></div>No incluye daños por uso indebido, golpes o accidentes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-5 h-5 text-brand-600"></i> Tiempo de Implementación
+                    </h3>
+                    <div class="bg-white p-4 rounded-lg border border-slate-200 flex items-center gap-4">
+                        <div class="bg-brand-50 p-3 rounded-full text-brand-600">
+                            <i data-lucide="timer" class="w-6 h-6"></i>
+                        </div>
+                        <p class="text-sm text-slate-700 font-medium">De <strong>3 a 7 días hábiles</strong> posteriores a anticipo y confirmación del proyecto.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 flex items-center gap-2">
+                        <i data-lucide="wallet" class="w-5 h-5 text-brand-600"></i> Forma de Pago
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center bg-white p-4 rounded-lg border border-slate-200">
+                            <span class="text-sm font-semibold text-slate-700">Anticipo (Inicio y hardware)</span>
+                            <span class="text-lg font-bold text-brand-600">50%</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white p-4 rounded-lg border border-slate-200">
+                            <span class="text-sm font-semibold text-slate-700">Contra entrega e instalación</span>
+                            <span class="text-lg font-bold text-brand-600">50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Footer / Signature -->
+        <footer class="mt-16 pt-8 border-t border-slate-200 text-center print-break-inside-avoid">
+            <p class="text-slate-600 italic mb-8">"Agradecemos la oportunidad de colaborar en la optimización operativa de su negocio."</p>
+            
+            <div class="inline-block text-center">
+                <p class="text-sm text-slate-500 mb-2">Atentamente,</p>
+                <div class="w-48 h-px bg-slate-300 mx-auto my-4"></div> <!-- Línea de firma -->
+                <h4 class="text-xl font-bold text-slate-900">R&G Solutions</h4>
+                <p class="text-sm text-slate-500">Soluciones Audiovisuales y Tecnológicas</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Script para inicializar íconos y fecha -->
+    <script>
+        // Inicializar Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Establecer fecha actual
+        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        const currentDate = new Date().toLocaleDateString('es-MX', dateOptions);
+        const dateElement = document.getElementById('current-date');
+        if (dateElement) {
+            dateElement.textContent = 'Fecha: ' + currentDate;
+        }
+    </script>
+</body>
+</html>

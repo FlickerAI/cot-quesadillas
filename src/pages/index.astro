@@ -17,26 +17,11 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        gold: {
-                            400: '#FBBF24',
-                            500: '#D4AF37',
-                            600: '#B8860B',
-                        },
-                        brandRed: {
-                            500: '#E63946',
-                            600: '#DC2626',
-                        },
-                        dark: {
-                            950: '#050505',
-                            900: '#0A0A0A',
-                            800: '#171717',
-                            700: '#262626',
-                            600: '#404040',
-                        }
+                        gold: { 400: '#FBBF24', 500: '#D4AF37', 600: '#B8860B' },
+                        brandRed: { 500: '#E63946', 600: '#DC2626' },
+                        dark: { 950: '#050505', 900: '#0A0A0A', 800: '#171717', 700: '#262626', 600: '#404040' }
                     }
                 }
             }
@@ -59,7 +44,6 @@
             @page {
                 margin: 1cm;
             }
-            /* Override dark mode colors for print */
             .print\:text-slate-900 { color: #0f172a !important; }
             .print\:text-slate-600 { color: #475569 !important; }
             .print\:bg-white { background-color: white !important; }
@@ -67,7 +51,6 @@
             .print\:shadow-none { box-shadow: none !important; }
         }
         
-        /* Subtle glow effects for the premium feel */
         .glow-gold {
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
         }
@@ -77,8 +60,6 @@
     </style>
 </head>
 <body class="bg-dark-900 text-neutral-300 font-sans antialiased pb-20">
-
-    <!-- Navbar / Header -->
     <header class="bg-dark-950 text-white py-6 shadow-md border-b border-dark-800 print:bg-white print:text-black print:border-b-2 print:border-black print:shadow-none">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center gap-3">
@@ -97,24 +78,25 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="max-w-6xl mx-auto px-6 mt-12 space-y-16 print:space-y-8 print:mt-6">
         
         <!-- Intro -->
         <section class="text-center max-w-3xl mx-auto">
             <h2 class="text-sm font-bold text-gold-500 uppercase tracking-widest mb-3">Propuesta Comercial</h2>
-            <h3 class="text-3xl md:text-4xl font-extrabold text-white print:text-black mb-4">Cotización — Sistema Punto de Venta R&G</h3>
-            <p class="text-lg text-neutral-400 print:text-slate-600 font-medium mb-8">Las Quilacas · Chilaquiles y alimentos preparados</p>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-white print:text-black mb-4">Licencia e Implementación del Sistema Punto de Venta R&G</h3>
+            <p class="text-lg text-neutral-400 print:text-slate-600 font-medium mb-8">Cliente: Las Quilacas</p>
             
-            <div class="bg-dark-800 p-8 rounded-2xl border border-dark-700 text-left print:bg-white print:border-none print:p-0">
+            <div class="bg-dark-800 p-8 rounded-2xl border border-dark-700 text-left print:bg-white print:border-none print:p-0 space-y-4">
                 <p class="text-neutral-300 print:text-slate-700 leading-relaxed text-lg">
-                    Gracias por considerar el Sistema Punto de Venta R&G Solutions para la operación de <strong class="text-gold-400 print:text-black">Las Quilacas</strong>.<br><br>
-                    La presente propuesta está diseñada para facilitar el control de ventas, pedidos, productos e inventario, ayudando a mejorar la organización diaria del negocio y reducir errores operativos.
+                    Gracias por considerar a <strong class="text-gold-400 print:text-black">R&G Solutions</strong> para la implementación de un sistema de punto de venta orientado a mejorar el control operativo de Las Quilacas.
+                </p>
+                <p class="text-neutral-300 print:text-slate-700 leading-relaxed text-lg">
+                    La presente propuesta contempla la instalación y puesta en marcha del sistema en un dispositivo compatible proporcionado por el cliente, con el objetivo de agilizar ventas, reducir errores y contar con información útil para la operación diaria.
                 </p>
             </div>
         </section>
 
-        <!-- Objetivos -->
+        <!-- Objetivo del Sistema -->
         <section class="print-break-inside-avoid">
             <div class="flex items-center gap-3 mb-8">
                 <div class="p-2 bg-dark-800 rounded-lg border border-dark-700 print:border-none print:bg-transparent">
@@ -122,71 +104,92 @@
                 </div>
                 <h3 class="text-2xl font-bold text-white print:text-black">Objetivo del Sistema</h3>
             </div>
-            <p class="text-neutral-400 print:text-slate-600 mb-6 text-lg">Implementar un sistema de punto de venta que permita:</p>
+            <p class="text-neutral-400 print:text-slate-600 mb-6 text-lg">Implementar una solución de punto de venta que permita:</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div class="bg-dark-800 p-5 rounded-xl border border-dark-700 hover:border-gold-500/50 transition-colors flex items-start gap-4 print:bg-white print:border-slate-200">
                     <i class="ph-fill ph-lightning text-gold-500 text-xl shrink-0 mt-0.5"></i>
-                    <p class="text-sm text-neutral-300 print:text-slate-700">Registrar ventas y pedidos de forma rápida.</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">Registrar ventas y pedidos de manera rápida y ordenada.</p>
                 </div>
                 <div class="bg-dark-800 p-5 rounded-xl border border-dark-700 hover:border-gold-500/50 transition-colors flex items-start gap-4 print:bg-white print:border-slate-200">
                     <i class="ph-fill ph-list-dashes text-gold-500 text-xl shrink-0 mt-0.5"></i>
-                    <p class="text-sm text-neutral-300 print:text-slate-700">Llevar control de productos, categorías y precios.</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">Administrar productos, categorías, precios y modificadores.</p>
+                </div>
+                <div class="bg-dark-800 p-5 rounded-xl border border-dark-700 hover:border-gold-500/50 transition-colors flex items-start gap-4 print:bg-white print:border-slate-200">
+                    <i class="ph-fill ph-package text-gold-500 text-xl shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">Llevar control básico de inventario y compras.</p>
                 </div>
                 <div class="bg-dark-800 p-5 rounded-xl border border-dark-700 hover:border-gold-500/50 transition-colors flex items-start gap-4 print:bg-white print:border-slate-200">
                     <i class="ph-fill ph-chart-bar text-gold-500 text-xl shrink-0 mt-0.5"></i>
-                    <p class="text-sm text-neutral-300 print:text-slate-700">Consultar reportes de ventas.</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">Consultar reportes e información de ventas.</p>
                 </div>
                 <div class="bg-dark-800 p-5 rounded-xl border border-dark-700 hover:border-gold-500/50 transition-colors flex items-start gap-4 print:bg-white print:border-slate-200">
-                    <i class="ph-fill ph-check-circle text-gold-500 text-xl shrink-0 mt-0.5"></i>
-                    <p class="text-sm text-neutral-300 print:text-slate-700">Mejorar el control de operación diaria.</p>
+                    <i class="ph-fill ph-cloud-arrow-up text-gold-500 text-xl shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">Generar respaldos de la información del negocio.</p>
                 </div>
                 <div class="bg-dark-800 p-5 rounded-xl border border-dark-700 hover:border-gold-500/50 transition-colors flex items-start gap-4 print:bg-white print:border-slate-200">
                     <i class="ph-fill ph-shield-check text-gold-500 text-xl shrink-0 mt-0.5"></i>
-                    <p class="text-sm text-neutral-300 print:text-slate-700">Reducir errores en cobros y registros.</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">Reducir errores de cobro y captura.</p>
                 </div>
                 <div class="bg-dark-800 p-5 rounded-xl border border-dark-700 hover:border-gold-500/50 transition-colors flex items-start gap-4 print:bg-white print:border-slate-200">
-                    <i class="ph-fill ph-trend-up text-gold-500 text-xl shrink-0 mt-0.5"></i>
-                    <p class="text-sm text-neutral-300 print:text-slate-700">Tener mayor claridad sobre ventas, productos más vendidos y movimientos del negocio.</p>
+                    <i class="ph-fill ph-clock-counter-clockwise text-gold-500 text-xl shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">Mantener un historial operativo para facilitar la toma de decisiones.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Inversión -->
+        <!-- Inversión y Alcance -->
         <section class="print-break-inside-avoid">
             <div class="flex items-center gap-3 mb-8">
                 <div class="p-2 bg-dark-800 rounded-lg border border-dark-700 print:border-none print:bg-transparent">
                     <i class="ph ph-credit-card text-gold-500 text-2xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-white print:text-black">Inversión</h3>
+                <h3 class="text-2xl font-bold text-white print:text-black">Inversión y Alcance Incluido</h3>
             </div>
 
-            <div class="max-w-2xl mx-auto">
-                <div class="bg-dark-950 rounded-2xl border-2 border-gold-500 overflow-hidden flex flex-col relative transform glow-gold print:bg-white print:border-slate-800 print:shadow-none">
-                    <div class="p-8 bg-dark-800 border-b border-dark-700 text-center print:bg-slate-100 print:border-slate-200">
-                        <h4 class="text-xl font-bold text-gold-400 print:text-black">Licencia de Software Punto de Venta R&G</h4>
-                        <div class="mt-4 flex justify-center items-baseline gap-1">
-                            <span class="text-4xl font-extrabold tracking-tight text-white print:text-black">$7,000</span>
-                            <span class="text-sm font-semibold text-gold-400 print:text-slate-600">MXN</span>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Tarjeta de Inversión (Left) -->
+                <div class="lg:col-span-5 flex flex-col gap-6">
+                    <div class="bg-dark-950 rounded-2xl border-2 border-gold-500 overflow-hidden flex flex-col relative transform glow-gold print:bg-white print:border-slate-800 print:shadow-none h-full">
+                        <div class="p-8 bg-dark-800 border-b border-dark-700 text-center print:bg-slate-100 print:border-slate-200 flex flex-col justify-center h-full">
+                            <h4 class="text-xl font-bold text-gold-400 print:text-black">Licencia e Implementación del Sistema Punto de Venta R&G</h4>
+                            <div class="mt-6 flex justify-center items-baseline gap-1">
+                                <span class="text-5xl font-extrabold tracking-tight text-white print:text-black">$7,000</span>
+                                <span class="text-lg font-semibold text-gold-400 print:text-slate-600">MXN</span>
+                            </div>
+                            <p class="text-sm text-gold-500/70 mt-3 uppercase tracking-wider font-semibold print:text-slate-500">Pago Único</p>
+                            <p class="text-xs text-neutral-400 print:text-slate-600 mt-6 px-4 leading-relaxed">
+                                La inversión incluye una licencia perpetua de uso de la versión adquirida, sin mensualidades obligatorias por el uso del sistema.
+                            </p>
                         </div>
-                        <p class="text-xs text-gold-500/70 mt-2 uppercase tracking-wider font-semibold print:text-slate-500">Pago Único</p>
                     </div>
-                    
-                    <div class="p-8 flex-1 text-sm text-neutral-300 space-y-8 print:text-slate-700">
-                        <!-- Incluye -->
+                </div>
+                
+                <!-- Alcance (Right) -->
+                <div class="lg:col-span-7 bg-dark-950 rounded-2xl border border-dark-700 p-8 print:bg-white print:border-slate-200">
+                    <div class="space-y-8">
                         <div>
-                            <h5 class="font-bold text-white print:text-black mb-3 flex items-center gap-2"><i class="ph-fill ph-check-circle text-gold-500 text-lg"></i> Incluye:</h5>
-                            <ul class="space-y-3 ml-7 list-disc marker:text-gold-500">
-                                <li>Sistema Punto de Venta R&G.</li>
-                                <li>Licencia permanente de uso.</li>
-                                <li>Registro y control de ventas.</li>
-                                <li>Catálogo de productos y categorías.</li>
-                                <li>Control básico de inventario.</li>
-                                <li>Reportes y estadísticas de ventas.</li>
-                                <li>Configuración inicial básica.</li>
-                                <li>Capacitación inicial para el uso del sistema.</li>
-                                <li>Instalación del software en el equipo proporcionado por el cliente.</li>
-                                <li>Soporte técnico básico remoto.</li>
+                            <h5 class="font-bold text-white print:text-black mb-4 flex items-center gap-2 text-lg"><i class="ph-fill ph-check-circle text-gold-500 text-xl"></i> Alcance Incluido</h5>
+                            <ul class="space-y-3 ml-2 text-sm text-neutral-300 print:text-slate-700">
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Sistema Punto de Venta R&G.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Funciones disponibles en la versión actual del sistema al momento de la implementación.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Registro de ventas y pedidos.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Catálogo de productos, categorías, precios y modificadores.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Gestión básica de inventario.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Historial operativo de ventas.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Registro y consulta de compras.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Reportes y estadísticas de ventas disponibles en la versión contratada.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Generación de respaldos locales y copias para resguardo en Google Drive.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Instalación del sistema en un (1) dispositivo principal compatible.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white print:text-black mb-4 flex items-center gap-2 text-lg"><i class="ph-fill ph-rocket-launch text-gold-500 text-xl"></i> Implementación Inicial</h5>
+                            <ul class="space-y-3 ml-2 text-sm text-neutral-300 print:text-slate-700">
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Alta inicial de categorías, productos, precios y configuraciones esenciales para comenzar operaciones, con información proporcionada por el cliente.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Configuración inicial de un punto de venta.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Capacitación inicial para las personas designadas por Las Quilacas.</li>
+                                <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Orientación básica de uso.</li>
                             </ul>
                         </div>
                     </div>
@@ -194,32 +197,89 @@
             </div>
         </section>
 
-        <!-- Condiciones Adicionales -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-10 print-break-inside-avoid">
+        <!-- Requisitos Técnicos -->
+        <section class="print-break-inside-avoid">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="p-2 bg-dark-800 rounded-lg border border-dark-700 print:border-none print:bg-transparent">
+                    <i class="ph ph-devices text-gold-500 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white print:text-black">Requisitos Técnicos de Operación</h3>
+            </div>
             
+            <p class="text-neutral-400 print:text-slate-600 mb-6 text-base">Para asegurar una operación estable, el dispositivo deberá cumplir como mínimo con características equivalentes a una Lenovo Tab One de 8.7”.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-dark-800 p-6 rounded-xl border border-dark-700 print:bg-slate-50 print:border-slate-200">
+                    <h5 class="font-bold text-gold-400 mb-4 flex items-center gap-2"><i class="ph ph-check-square-offset text-xl"></i> Requisitos mínimos recomendados</h5>
+                    <ul class="space-y-3 text-sm text-neutral-300 print:text-slate-700">
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Sistema operativo Android 14 o superior.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Memoria RAM mínima de 4 GB.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Almacenamiento interno mínimo de 64 GB.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Pantalla de al menos 8.7 pulgadas.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Resolución HD mínima de 1340 × 800.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Espacio disponible suficiente para la operación continua del sistema y conservación local de información.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Conectividad Wi-Fi estable.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Bluetooth funcional en caso de utilizar periféricos compatibles.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Cuenta de Google activa si se utilizará respaldo en Google Drive.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-dark-800 p-6 rounded-xl border border-dark-700 print:bg-slate-50 print:border-slate-200">
+                    <h5 class="font-bold text-gold-400 mb-4 flex items-center gap-2"><i class="ph ph-star text-xl"></i> Equipo recomendado</h5>
+                    <p class="text-sm text-neutral-300 print:text-slate-700 leading-relaxed mb-6">
+                        Lenovo Tab One de 8.7”, 4 GB de RAM y 64 GB de almacenamiento, modelo utilizado por R&G Solutions como referencia de operación y compatibilidad.
+                    </p>
+                    
+                    <h5 class="font-bold text-gold-400 mb-4 flex items-center gap-2 mt-8"><i class="ph ph-cloud-arrow-up text-xl"></i> Respaldo y Resguardo de Información</h5>
+                    <p class="text-sm text-neutral-300 print:text-slate-700 leading-relaxed mb-4">El sistema permite generar respaldos de la base de datos de forma local en el dispositivo y copias para resguardo en Google Drive.</p>
+                    <ul class="space-y-3 text-sm text-neutral-300 print:text-slate-700">
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Las Quilacas conserva el control y acceso a su propia información.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>La cuenta de Google Drive, credenciales, permisos, almacenamiento y conservación de los respaldos son responsabilidad del cliente.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>R&G Solutions no almacena, administra ni controla la cuenta de Google Drive del cliente.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>R&G Solutions no será responsable por pérdidas de información ocasionadas por eliminación de archivos, falta de respaldos, contraseñas extraviadas, fallas del dispositivo, virus, formateos, daños físicos, falta de internet o servicios externos fuera de su control razonable.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- No Incluye y Soporte -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-10 print-break-inside-avoid">
             <!-- Columna Izquierda -->
             <div class="space-y-10">
                 <div>
                     <h3 class="text-xl font-bold text-white print:text-black border-b border-dark-700 print:border-slate-300 pb-3 mb-5 flex items-center gap-3">
                         <i class="ph ph-x-circle text-brandRed-500 text-xl"></i> No Incluye
                     </h3>
+                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-4 font-medium">La presente cotización no incluye tablet, impresora, cajón de dinero, accesorios, red, conectividad, periféricos ni ningún otro componente de hardware.</p>
                     <ul class="space-y-3 text-sm text-neutral-300 print:text-slate-700">
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Tablet, impresora, cajón de dinero, bases, accesorios u otro hardware.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Configuración avanzada de inventario.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Carga masiva de productos.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Registro detallado de recetas, insumos o costos por platillo.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Personalizaciones especiales fuera de las funciones actuales del sistema.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Visitas técnicas presenciales posteriores a la instalación.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Actualizaciones mayores o módulos nuevos.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Hardware o periféricos de cualquier tipo.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Instalación o configuración de impresoras, cajones de dinero, lectores, terminales bancarias u otros periféricos no contemplados expresamente.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Configuración de redes, internet, routers o servicios externos.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Carga masiva / Alta masiva de productos.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Configuración detallada de inventario, insumos, recetas y costos / rendimientos.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Instalación en equipos o terminales adicionales.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Capacitación para personal nuevo posterior a la capacitación inicial, o capacitación adicional.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Visitas técnicas presenciales posteriores a la implementación.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Personalizaciones de pantallas, tickets, reportes, procesos o funciones.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Desarrollo de nuevas funciones o implementación de módulos adicionales / solución multisucursal.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Aplicación comandera, terminales adicionales o módulos de atención para múltiples dispositivos.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Integraciones con plataformas externas, facturación, aplicaciones de entrega o servicios de terceros.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-brandRed-500 mt-1.5 shrink-0"></div>Recuperación de información que no cuente con un respaldo disponible del cliente.</li>
                     </ul>
+                    <p class="text-sm text-neutral-400 print:text-slate-600 mt-5 italic">Toda solicitud que no esté expresamente incluida en esta propuesta será considerada un requerimiento adicional y requerirá cotización y aprobación previa.</p>
                 </div>
 
                 <div>
                     <h3 class="text-xl font-bold text-white print:text-black border-b border-dark-700 print:border-slate-300 pb-3 mb-5 flex items-center gap-3">
-                        <i class="ph ph-shield-check text-gold-500 text-xl"></i> Garantía
+                        <i class="ph ph-gear text-gold-500 text-xl"></i> Configuración Avanzada y Servicios
                     </h3>
-                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-3">R&G Solutions garantiza el funcionamiento correcto del software conforme a las funciones establecidas en esta propuesta.</p>
-                    <p class="text-sm text-neutral-300 print:text-slate-700">No se incluyen fallas ocasionadas por daños, virus, modificaciones no autorizadas, problemas del equipo del cliente, conexión a internet, sistemas operativos no compatibles o instalación de software externo que afecte el funcionamiento del sistema.</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-4">Podrán cotizarse por separado los servicios que impliquen un alcance adicional. Solicitudes posteriores que impliquen cambios de alcance, nuevas configuraciones o funciones no incluidas serán cotizadas por separado.</p>
+                    
+                    <h3 class="text-xl font-bold text-white print:text-black border-b border-dark-700 print:border-slate-300 pb-3 mb-5 mt-10 flex items-center gap-3">
+                        <i class="ph ph-copyright text-gold-500 text-xl"></i> Propiedad Intelectual
+                    </h3>
+                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-3">El Sistema Punto de Venta R&G, incluyendo su código fuente, estructura, diseño, lógica, documentación, marca y elementos asociados, es propiedad intelectual de R&G Solutions.</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">La presente propuesta otorga a Las Quilacas una licencia de uso del software y no implica cesión de código fuente, derechos de modificación, reproducción, distribución, comercialización o propiedad del sistema.</p>
                 </div>
             </div>
 
@@ -227,44 +287,58 @@
             <div class="space-y-10">
                 <div>
                     <h3 class="text-xl font-bold text-white print:text-black border-b border-dark-700 print:border-slate-300 pb-3 mb-5 flex items-center gap-3">
-                        <i class="ph ph-gear text-gold-500 text-xl"></i> Configuración Avanzada
+                        <i class="ph ph-headphones text-gold-500 text-xl"></i> Soporte Técnico Básico Remoto
                     </h3>
-                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-3">La configuración avanzada podrá cotizarse por separado en caso de requerir:</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-4">El soporte técnico básico se brinda de forma remota por los medios de atención definidos por R&G Solutions.</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-3 font-medium">Incluye asistencia remota relacionada directamente con el funcionamiento del software, tales como:</p>
                     <ul class="space-y-3 text-sm text-neutral-300 print:text-slate-700">
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Alta masiva de productos.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Configuración detallada de inventario.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Registro de recetas e insumos.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Ajustes personalizados de operación.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Personalización de tickets.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Implementación en equipos adicionales.</li>
-                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Funciones nuevas o módulos especiales.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Revisión de incidencias atribuibles al sistema.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Validación de errores reproducibles del software.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Orientación para restaurar respaldos disponibles del cliente.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>La restauración remota de un respaldo disponible y correctamente generado podrá realizarse sin costo como parte del soporte técnico básico.</li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="text-xl font-bold text-white print:text-black border-b border-dark-700 print:border-slate-300 pb-3 mb-5 flex items-center gap-3">
-                        <i class="ph ph-headphones text-gold-500 text-xl"></i> Soporte y Actualizaciones
+                        <i class="ph ph-arrows-clockwise text-gold-500 text-xl"></i> Actualizaciones
                     </h3>
-                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-3">La licencia incluye soporte técnico básico remoto para incidencias relacionadas con el funcionamiento general del sistema.</p>
-                    <p class="text-sm text-neutral-300 print:text-slate-700">Las actualizaciones necesarias para estabilidad o corrección de errores estarán incluidas. Las actualizaciones mayores, nuevas herramientas, módulos adicionales o desarrollos personalizados podrán cotizarse por separado.</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-3">Las correcciones necesarias para mantener la estabilidad de la versión adquirida y resolver errores atribuibles al sistema estarán incluidas dentro del soporte técnico básico.</p>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">Las actualizaciones mayores, nuevas funciones, módulos adicionales, integraciones, rediseños, personalizaciones o desarrollos especiales podrán cotizarse por separado.</p>
                 </div>
             </div>
-            
         </section>
 
-        <!-- Implementación y Pagos -->
+        <!-- Implementación, Entrega y Pagos -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-10 print-break-inside-avoid">
             <div class="space-y-10">
                 <div>
                     <h3 class="text-xl font-bold text-white print:text-black border-b border-dark-700 print:border-slate-300 pb-3 mb-5 flex items-center gap-3">
                         <i class="ph ph-calendar text-gold-500 text-xl"></i> Tiempo de Implementación
                     </h3>
-                    <div class="bg-dark-800 p-5 rounded-xl border border-dark-700 flex items-center gap-5 print:bg-white print:border-slate-200">
-                        <div class="bg-dark-900 print:bg-slate-100 p-3 rounded-full text-gold-500">
-                            <i class="ph ph-timer text-2xl"></i>
-                        </div>
-                        <p class="text-sm text-neutral-300 print:text-slate-700 font-medium">De <strong class="text-white print:text-black">2 a 5 días hábiles</strong> posteriores a la confirmación del proyecto y recepción del anticipo.</p>
+                    <div class="bg-dark-800 p-5 rounded-xl border border-dark-700 print:bg-white print:border-slate-200">
+                        <p class="text-sm text-neutral-300 print:text-slate-700 font-medium mb-4">El tiempo estimado de implementación es de <strong class="text-white print:text-black">2 a 5 días hábiles</strong> posteriores a:</p>
+                        <ul class="space-y-2 text-sm text-neutral-400 print:text-slate-600 ml-2">
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-gold-500"></i> Confirmación del anticipo.</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-gold-500"></i> Disponibilidad del dispositivo compatible.</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-gold-500"></i> Recepción de la información necesaria para la configuración inicial.</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-gold-500"></i> Validación de los productos, precios y datos proporcionados por el cliente.</li>
+                        </ul>
                     </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white print:text-black border-b border-dark-700 print:border-slate-300 pb-3 mb-5 flex items-center gap-3">
+                        <i class="ph ph-handshake text-gold-500 text-xl"></i> Entrega y Validación
+                    </h3>
+                    <p class="text-sm text-neutral-300 print:text-slate-700 mb-3">La entrega se considerará realizada una vez que:</p>
+                    <ul class="space-y-3 text-sm text-neutral-300 print:text-slate-700">
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>El sistema esté instalado en el dispositivo acordado.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>La configuración inicial incluida haya sido aplicada.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Se realice una demostración funcional del sistema.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>El cliente valide la operación básica conforme al alcance de esta propuesta.</li>
+                        <li class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-gold-500 mt-1.5 shrink-0"></div>Validación funcional del sistema al momento de la entrega.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -275,21 +349,28 @@
                     </h3>
                     <div class="space-y-4">
                         <div class="flex justify-between items-center bg-dark-800 p-5 rounded-xl border border-dark-700 print:bg-white print:border-slate-200">
-                            <span class="text-sm font-semibold text-neutral-300 print:text-slate-700">50% de anticipo</span>
+                            <span class="text-sm font-semibold text-neutral-300 print:text-slate-700">Anticipo para inicio de implementación</span>
                             <span class="text-xl font-bold text-gold-400 print:text-black">$3,500 MXN</span>
                         </div>
                         <div class="flex justify-between items-center bg-dark-800 p-5 rounded-xl border border-dark-700 print:bg-white print:border-slate-200">
-                            <span class="text-sm font-semibold text-neutral-300 print:text-slate-700">50% contra entrega e instalación</span>
+                            <span class="text-sm font-semibold text-neutral-300 print:text-slate-700">Pago contra entrega e instalación</span>
                             <span class="text-xl font-bold text-gold-400 print:text-black">$3,500 MXN</span>
                         </div>
                     </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white print:text-black border-b border-dark-700 print:border-slate-300 pb-3 mb-5 flex items-center gap-3">
+                        <i class="ph ph-clock text-gold-500 text-xl"></i> Vigencia de la Propuesta
+                    </h3>
+                    <p class="text-sm text-neutral-300 print:text-slate-700">La presente cotización tiene una vigencia de 15 días naturales a partir de su fecha de emisión.</p>
                 </div>
             </div>
         </section>
 
         <!-- Footer / Signature -->
         <footer class="mt-20 pt-10 border-t border-dark-800 text-center print-break-inside-avoid print:border-slate-300">
-            <p class="text-neutral-500 print:text-slate-600 italic mb-10">"Agradecemos la oportunidad de colaborar con <strong>Las Quilacas</strong> en la mejora de su operación y control de ventas."</p>
+            <p class="text-neutral-500 print:text-slate-600 italic mb-10">"Agradecemos la oportunidad de colaborar con <strong>Las Quilacas</strong> en la mejora de su operación, control de ventas e información del negocio."</p>
             
             <div class="inline-block text-center">
                 <p class="text-sm text-neutral-400 print:text-slate-500 mb-3">Atentamente,</p>
